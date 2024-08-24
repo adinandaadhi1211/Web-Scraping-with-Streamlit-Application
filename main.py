@@ -17,7 +17,6 @@ def doct_prof(location, specialization):
         if res.status_code == 200:
             soup = BeautifulSoup(res.text, 'html.parser')
             profiles = soup.find_all('div', class_='u-border-general--bottom')
-            # no_of_profiles = len(profiles)
             if not profiles:
                 break
 
